@@ -1,5 +1,5 @@
 app.controller('filmListController', function(){
-	this.films = ['one','two','three'];
+	this.films = [];
 	this.film = '';
 	this.reccomend ='';
 	this.save = function(nameFilm){
