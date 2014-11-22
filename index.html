@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Film random</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+	<script src="all.js"></script>
+</head>
+<body ng-app="firstModule">
+	<div class="wrapper">
+		<div class="list_films" ng-controller="filmListController as filmList">
+			<span> there are {{filmList.films.length}} films</span>
+			<ul class="film_list_menu">
+				<li ng-repeat="film in filmList.films">{{film}}</li>
+			</ul>
+			<div class="enter_film">
+				<form novalidate>
+					<input type="text" placeholder="Enter name of film" ng-model="filmList.film">
+					<p>film - {{filmList.film}}</p>
+					<div class="btns">
+						<button ng-click="filmList.save(filmList.film)">Save</button>
+						<button ng-click="filmList.reset(nameFilm)">Reset</button>
+						
+					</div>
+				</form>
+			</div>
+			<div class="your_film">
+				<button ng-click="filmList.randomize()">Get film</button>
+				Reccomended to watch : {{filmList.reccomend}}
+			</div>
+		</div>
+	</div>
+</body>
+</html>
