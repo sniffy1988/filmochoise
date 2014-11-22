@@ -1,4 +1,3 @@
-var app = angular.module('firstModule',[]);
 app.controller('filmListController', function(){
 	this.films = ['one','two','three'];
 	this.film = '';
