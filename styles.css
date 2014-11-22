@@ -44,14 +44,45 @@ table {
 	border-spacing: 0;
 }
 /* MAIN FORM */
+/* placeholder styles */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+    font-family: 'Roboto Condensed';
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   font-family: 'Roboto Condensed';
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   font-family: 'Roboto Condensed';
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+   font-family: 'Roboto Condensed';
+}
+/* main styles */
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
 html,body,.wrapper{
 	height: 100%;
 }
-.wrapper{
+body{
 	background: url(img/bg.jpg)no-repeat;
 	-webkit-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	font-size: 14px;
+	font-family: 'Roboto Condensed';
+}
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
 }
 .site_header{
 	font-family: 'Oswald', sans-serif;
@@ -67,12 +98,75 @@ html,body,.wrapper{
 	padding: 4px 10px;
 	background: #cb4e4e;
 	text-transform: uppercase;
-	-webkit-border-radius: 20%;
-	        border-radius: 20%;
+	-webkit-border-radius: 6px;
+	        border-radius: 6px;
 	border: none;
 	font-size: 16px;
 }
 .btn:active,.btn:focus{
 	outline: none;
 	border: none;
+}
+.description{
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.description h2{
+	font-family: 'Oswald', sans-serif;
+	color: #fafafa;
+	font-size: 25px;
+}
+.description p{
+	font-family: 'Roboto Condensed';
+	color: #fafafa;
+	line-height: 1.5;
+}
+.description .press{
+	text-transform: uppercase;
+	color: #555;
+	display: inline-block;
+	background: #f2f2f2;
+	padding: 4px 10px;
+	border-radius: 4px;
+}
+.listfilms{
+	padding: 10px;
+}
+.counter_holder{
+	font-family: 'Roboto Condensed';
+	color: #FFF;
+}
+.counter_holder .counter {
+	color: #CB4E4E;
+	font-size: 15px;
+}
+.film_list_menu{
+	border: 1px solid #fff;
+	padding: 15px;
+	margin: 5px;
+	-webkit-border-radius: 7px;
+	        border-radius: 7px;
+}
+.film_list_menu li{
+	display: inline-block;
+	margin: 0 4px;
+	padding: 5px;
+	background: #f5f5f5;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+}
+.main_input{
+	width: 100%;
+	padding: 15px 10px;
+	margin: 10px 0;
+	border: none;
+	background: #FF6600;
+	font-family: 'Roboto Condensed';
+	color: #fafafa;
+	font-size: 16px;
+}
+.main_input:focus{
+	border: none;
+	outline: none;
 }
