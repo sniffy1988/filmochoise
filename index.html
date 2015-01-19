@@ -27,9 +27,9 @@
 			<div class="enter_film">
 				<form novalidate>
 					<div class="btns">
-						<button ng-click="filmList.save(filmList.film)" class="btn">Save</button>
-						<button ng-click="filmList.reset(nameFilm)" class="btn">Reset</button>
-						
+						<button ng-click="filmList.save(filmList.film)" class="btn transition" ng-show="filmList.film">Save</button>
+						<button ng-click="filmList.reset(nameFilm)" class="btn transition" ng-show="filmList.film">Reset</button>
+						<div id="error_output"></div>
 					</div>
 					<input type="text" placeholder="Enter name of film" ng-model="filmList.film" class="main_input">
 				</form>
